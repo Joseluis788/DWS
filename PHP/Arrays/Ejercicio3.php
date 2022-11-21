@@ -14,14 +14,17 @@
         )
     );
 
+    echo ("<table>");
     foreach ($colores as $tipo => $color) 
     {
-        echo ("$tipo: ");
-        foreach ($color as $nombre => $codigo) 
+        echo ("<tr>");
+        echo ("<td>$tipo: </td>");
+        foreach ($color as $nombreColor => $codigo) 
         {
-            echo("<tr style{background-color: $codigo;}> $nombre: $codigo</tr");
+            echo("<td style='background-color: $codigo;'> $nombreColor: $codigo</td>");
         }
-        echo("<br><br>");
+        echo("</tr>");
     }
+    echo ("</table>");
 
 ?>
