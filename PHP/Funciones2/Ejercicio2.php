@@ -4,16 +4,7 @@
 
     function media (...$numeros)
     {
-        $contador = 0;
-        $suma = 0;
-        foreach($numeros as &$valor)
-        {
-            $suma += $valor;
-            $contador++;
-        }
-
-        $solucion = $suma / $contador;
-        return $solucion;
+        return array_sum($numeros) / count($numeros);
     }
 
 ?>
