@@ -10,7 +10,7 @@
     <h2 style="color: blue;">Elementos de entrada</h2>
     <h3 style="font-style: italic;">Elementos de tipo INPUT</h3>
     <div style="width: 50%">
-        <form action="<?php echo($_SERVER['PHP_SELF']); ?>" method="post">
+        <form action="Ejercicio2-resultados.php" method="post" ENCTYPE="multipart/form-data>">
             <h4>TEXT</h4>
             <label>Introduzca la cadena a buscar: </label>
             <input type="text" value="valor por defecto" name="busqueda" size="20">
