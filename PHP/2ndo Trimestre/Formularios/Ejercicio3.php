@@ -26,13 +26,17 @@
                 echo("<span style='color:red;'>Debe introducir una búsqueda!!</span>");
             }
         }
+        // Aquí se encuentran los tipo radio donde además compruebo si ya se ha especificado anteriormente, y si es así se marca como checked
         ?>
         <br><br>
         <label>Buscar en: </label>
-        <input type="radio" name="tipo" value="Titulo" checked<?php if(isset($_REQUEST['enviar']))if(stricmp($_REQUEST['tipo'], "titulo") == 0) echo(" checked") ?>>Titulo de la canción
-        <input type="radio" name="tipo" value="Album"<?php if(isset($_REQUEST['enviar']))if(stricmp($_REQUEST['tipo'], "album") == 0) echo(" checked") ?>>Nombre del álbum
-        <input type="radio" name="tipo" value="Ambos"<?php if(isset($_REQUEST['enviar']))if(stricmp($_REQUEST['tipo'], "ambos") == 0) echo(" checked") ?>>Ambos campos
+        <input type="radio" name="tipo" value="Titulo" checked<?php if(isset($_REQUEST['enviar']))if(strcmp($_REQUEST['tipo'], "Titulo") == 0) echo(" checked") ?>>Titulo de la canción
+        <input type="radio" name="tipo" value="Album"<?php if(isset($_REQUEST['enviar']))if(strcmp($_REQUEST['tipo'], "Album") == 0) echo(" checked") ?>>Nombre del álbum
+        <input type="radio" name="tipo" value="Ambos"<?php if(isset($_REQUEST['enviar']))if(strcmp($_REQUEST['tipo'], "Ambos") == 0) echo(" checked") ?>>Ambos campos
         <br><br>
+        <?php
+            // Aquí se encuentran los tipo select con sus options en los que se comprueba si se ha especificado anteriormente y se marca con selected
+        ?>
         <label>Género musical: </label>
         <select name="genero">
             <option value="Todos" selected<?php if(isset($_REQUEST['enviar']))if(strcmp($_REQUEST['genero'], "Todos") == 0) echo(" selected") ?>>Todos</option>
@@ -51,6 +55,7 @@
     </form>
     <?php
     }
+    // Muestro los datos introducidos
     else
     {
         ?>
