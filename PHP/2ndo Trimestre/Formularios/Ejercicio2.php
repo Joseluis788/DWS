@@ -56,7 +56,7 @@
             <label>Idiomas: </label>
             <select name="idiomas[]" MULTIPLE size="3">
                 <option value="Inglés" selected>Inglés</option>
-                <option value="Espanol">Español</option>
+                <option value="Español">Español</option>
                 <option value="Japonés">Japonés</option>
             </select>
             <hr>
