@@ -11,11 +11,10 @@
     <?php
 
         include "conexion.inc.php";
-
     ?>
 
     <div class="container">
-        <table class="table">
+        <table class="table table-bordered table-striped">
             <tr class="table-warning">
                 <th>Titulo</th>
                 <th>Texto</th>
@@ -25,10 +24,24 @@
             </tr>
             <?php
 
+                $resultados = $conexion->query("SELECT * FROM noticias ORDER BY fecha DESC");
+                $informacion = $resultados->fetch_object();
+                while($informacion != null)
+                {
+                    echo("<tr class='table-primary'>");
+                    echo("<td>$informacion->titulo</td>");
+                    echo("<td>$informacion->texto</td>");
+                    echo("<td>$informacion->categoria</td>");
+                    echo("<td>$informacion->fecha</td>");
+                    echo("<td>$informacion->imagen</td>");
+                    echo("</tr>");
+                    $informacion = $resultados->fetch_object();
+                }
                 
-
             ?>
         </table>
+        <br>
+        <a href="insertarNoticia.php">Insertar Noticia</a>
     </div>
 </body>
 </html>

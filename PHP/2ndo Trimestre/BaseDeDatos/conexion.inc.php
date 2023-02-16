@@ -2,12 +2,8 @@
 
     // Conexion utilizando Orientación a Objetos
     @$conexion = new mysqli('localhost', 'dwes', 'abc123.', 'inmobiliaria');
-    $error = $conexion->connect_errno;
-    if ($error != null) {
-        echo "Error $error conectando a la base de datos: $conexion->connect_error";
-        exit();
+    if ($conexion != null && $conexion->errno != 0) {
+        echo "Error $conexion->connect_errno conectando a la base de datos: $conexion->connect_error";
+        die("Arregle el asunto");
     }
-    echo "<h1>Conexión realizada correctamente</h1>";
-
-
 ?>
