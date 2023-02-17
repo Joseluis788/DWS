@@ -13,6 +13,8 @@
     include "conexion.inc.php";
     ?>
     <div class="container">
+        <h1 class="text-primary">Noticias</h1>
+        <br>
         <form action="#" method="post">
             <table class="table table-bordered table-striped">
                 <tr class="table-warning">
@@ -35,9 +37,7 @@
                         echo("<td>$informacion->categoria</td>");
                         echo("<td>$informacion->fecha</td>");
                         echo("<td>$informacion->imagen</td>");
-                        ?>
-                        <td><input type="checkbox" name="borrar[]" value=<?php $informacion->id ?>></td>
-                        <?php
+                        echo("<td><input type='checkbox' name='borrar[]' value='$informacion->id'></td>");
                         echo("</tr>");
                         $informacion = $resultados->fetch_object();
                     }
@@ -46,16 +46,18 @@
             </table>
             <br>
             <input type="submit" name="enviar" value="Eliminar">
+            <br><br>
+            <a href="consultaInmobiliaria.php">Consultar noticias</a>
+            <br><br>
+            <a href="insertarNoticia.php">Insertar noticia</a>
         </form>
         <br>
         <?php
             if (isset($_REQUEST['enviar']) && !empty($_REQUEST['borrar']))
             {
-                $array();
-                foreach ($_REQUEST['borrar'] as $borrar) {
-                    array_push($array, $borrar);
-                }
-                var_dump($array);
+                $borrar = implode(",", $_REQUEST['borrar']);
+                $conexion->query("DELETE FROM noticias WHERE id IN ($borrar)");
+                header("Location: eliminarNoticia.php");
             }
         ?>
     </div>

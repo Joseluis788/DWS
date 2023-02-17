@@ -1,5 +1,4 @@
 <?php
-
     // Conexion utilizando Orientación a Objetos
     @$conexion = new mysqli('localhost', 'dwes', 'abc123.', 'inmobiliaria');
     if ($conexion != null && $conexion->errno != 0) {
