@@ -60,20 +60,20 @@
 
             if (is_uploaded_file($_FILES['imagen']['tmp_name'])) {
 
-                //comptobamos tipo 
+                // Comprobamos tipo 
                 $tipo = mime_content_type($_FILES['imagen']['tmp_name']);
                 if (strstr($tipo, "image")) {
 
-                    //lo movemos
-                    if (move_uploaded_file($_FILES['imagen']['tmp_name'], "img\\" . $imagen)) {
-                        //se movio
-                        // y se mostra
+                    // Lo movemos
+                    if (move_uploaded_file($_FILES['imagen']['tmp_name'], "img\\" . $imagen)) 
+                    {
 
-                    } else {
+                    } else 
+                    {
                         echo "no se pudo guardar";
                     }
                 } else {
-                    //no es una imagen
+                    // No es una imagen
                     echo "el fichero debe de ser una imagen";
                 }
             } else {
