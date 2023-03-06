@@ -21,7 +21,7 @@
 
 <body class="fondo">
     <div class="container-fluid shadow-sm d-flex justify-content-center align-items-center header mb-3">
-        <a href="PaginaPrincipal.html"><img style="height: 100px;" src="imagenes/logo.png" alt="Logo BookLoop"></a>
+        <a href="PaginaPrincipal.php"><img style="height: 100px;" src="imagenes/logo.png" alt="Logo BookLoop"></a>
     </div>
     <h1 class="d-flex justify-content-center">Inicio de sesión</h1>
     <div class="container d-flex justify-content-center mt-5">
@@ -29,18 +29,31 @@
 
         </div>
         <div class="col-6 colorImportante p-3 rounded-3">
-            <form action="">
-                <i class="fa-solid fa-user"></i>
-                <label for="">Usuario: </label>
-                <input type="text">
+            <form action="#" method="post">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <input class="form-control" type="text" name="usuario" placeholder="Usuario">
+                </div>        
                 <br><br>
-                <i class="fa-solid fa-lock"></i>
-                <label for="">Contraseña: </label>
-                <input type="password">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <input class="form-control" type="password" name="pass" placeholder="Contraseña">
+                </div>
+                <br><br>
+                <div class="d-flex justify-content-center">
+                    <input class="btn btn-info" type="submit" value="Acceder" name="enviar">
+                </div>
             </form>
             <hr>
+            <?php
+                include "validarLogin.php";
+            ?>
             <div class="d-flex justify-content-center">
-                <a href="crearCuenta.html">¿No tienes cuenta? Crea una aquí</a>
+                <a href="crearCuenta.php">¿No tienes cuenta? Crea una aquí</a>
             </div>
         </div>
         <div class="col-3">

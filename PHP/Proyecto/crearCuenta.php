@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookLoop</title>
+    <script src="https://kit.fontawesome.com/78556e7c4a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/bootstrap-icons.svg">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .hh {
+            border: 1px red solid;
+        }
+    </style>
+</head>
+
+<body class="fondo">
+    <div class="container-fluid shadow-sm d-flex justify-content-center align-items-center header mb-3">
+        <a href="PaginaPrincipal.php"><img style="height: 100px;" src="imagenes/logo.png" alt="Logo BookLoop"></a>
+    </div>
+    <h1 class="d-flex justify-content-center">Crear cuenta</h1>
+    <div class="container d-flex justify-content-center mt-5">
+        <div class="col-3">
+
+        </div>
+        <div class="col-6 colorImportante p-3 rounded-3">
+            <form action="#" method="POST">
+            <div class="input-group">
+                    <div class="input-group-text">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <input class="form-control" type="text" name="usuario" placeholder="Usuario">
+                </div>        
+                <br><br>
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <input class="form-control" type="password" name="pass" placeholder="Contraseña">
+                </div>
+                <br><br>
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <input class="form-control" type="text" name="email" placeholder="Email">
+                </div>
+                <br><br>
+                <div class="d-flex justify-content-center">
+                    <input class="btn btn-info" type="submit" value="Acceder" name="enviar">
+                </div>
+            </form>
+            <hr>
+            <?php
+            include "validarCreacionCuenta.php";
+            ?>
+            <div class="d-flex justify-content-center">
+                <a href="login.php">¿Tienes una cuenta? Inicia sesión aquí</a>
+            </div>
+        </div>
+        <div class="col-3">
+
+        </div>
+
+    </div>
+</body>
+
+</html>
