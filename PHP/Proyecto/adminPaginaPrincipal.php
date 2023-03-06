@@ -18,7 +18,7 @@
     <div class="container-fluid shadow-sm d-flex justify-content-between align-items-center header">
         <img style="height: 100px;" src="imagenes/logo.png" alt="Logo BookLoop">
         <div class="d-flex flex-column align-items-center">
-            <button class="btn btn-light h-25"><i class="fa-solid fa-user"></i> ADMINISTRADOR</button>
+            <a href="panelAdministrador.php"><button class="btn btn-light h-25"><i class="fa-solid fa-user"></i> ADMINISTRADOR</button></a>
             <a class="text-white" href="logOut.php">Cerrar Sesión</a>
         </div>
         

@@ -2,9 +2,9 @@
 
     if (isset($_REQUEST['enviar']))
     {
-        $usuario = $_REQUEST['usuario'];
-        $pass = $_REQUEST['pass'];
-        $email = $_REQUEST['email'];
+        $usuario = trim($_REQUEST['usuario']);
+        $pass = trim($_REQUEST['pass']);
+        $email = trim($_REQUEST['email']);
 
         if (strcmp($usuario, "") !== 0 && strcmp($email, "") !== 0 && strcmp($pass, "") !== 0)
         {
