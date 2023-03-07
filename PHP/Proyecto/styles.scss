@@ -1,8 +1,3 @@
-@import "./node_modules/bootstrap/scss/functions";
-@import "./node_modules/bootstrap/scss/variables";
-@import "./node_modules/bootstrap/scss/variables-dark";
-@import "./node_modules/bootstrap/scss/bootstrap.scss";
-
 .fondo {
     background-color: #f5fdff;
 }
@@ -11,8 +6,16 @@
     background-color: #00a2d4;
 }
 
+.fondoOscuro {
+    background-color: #003546;
+}
+
 .colorImportante{
     background-color: #d5c0fa;
+}
+
+.colorImportanteOscuro{
+    background-color: #332055;
 }
 
 .img-wrapper {
@@ -83,3 +86,8 @@ img {
 .textColorImportante{
     color:#6eddff;
 }
+
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/variables-dark";
+@import "./node_modules/bootstrap/scss/bootstrap.scss";

@@ -1,4 +1,87 @@
 @charset "UTF-8";
+.fondo {
+  background-color: #f5fdff;
+}
+
+.header {
+  background-color: #00a2d4;
+}
+
+.fondoOscuro {
+  background-color: #003546;
+}
+
+.colorImportante {
+  background-color: #d5c0fa;
+}
+
+.colorImportanteOscuro {
+  background-color: #332055;
+}
+
+.img-wrapper {
+  max-width: 100%;
+  height: 45vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.titulo {
+  font-size: 100%;
+}
+
+@media screen and (min-width: 850px) {
+  .divCartas {
+    display: flex;
+  }
+  .img-wrapper {
+    height: 14vw;
+  }
+  .titulo {
+    font-size: 200%;
+  }
+}
+.divCartas {
+  padding: 1em;
+}
+
+@media (max-width: 849px) and (min-width: 570px) {
+  .divCartas {
+    display: flex;
+  }
+  .img-wrapper {
+    max-width: 100%;
+    height: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .titulo {
+    font-size: 150%;
+  }
+}
+.divCartas {
+  padding: 1em;
+}
+
+.card {
+  margin: 0.5em;
+}
+
+.iconos {
+  font-size: 150%;
+}
+
+.textColorImportante {
+  color: #6eddff;
+}
+
 /*!
  * Bootstrap  v5.3.0-alpha1 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -11723,78 +11806,4 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
-}
-.fondo {
-  background-color: #f5fdff;
-}
-
-.header {
-  background-color: #00a2d4;
-}
-
-.colorImportante {
-  background-color: #d5c0fa;
-}
-
-.img-wrapper {
-  max-width: 100%;
-  height: 45vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.titulo {
-  font-size: 100%;
-}
-
-@media screen and (min-width: 850px) {
-  .divCartas {
-    display: flex;
-  }
-  .img-wrapper {
-    height: 14vw;
-  }
-  .titulo {
-    font-size: 200%;
-  }
-}
-.divCartas {
-  padding: 1em;
-}
-
-@media (max-width: 849px) and (min-width: 570px) {
-  .divCartas {
-    display: flex;
-  }
-  .img-wrapper {
-    max-width: 100%;
-    height: 25vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .titulo {
-    font-size: 150%;
-  }
-}
-.divCartas {
-  padding: 1em;
-}
-
-.card {
-  margin: 0.5em;
-}
-
-.iconos {
-  font-size: 150%;
-}
-
-.textColorImportante {
-  color: #6eddff;
 }/*# sourceMappingURL=styles.css.map */
