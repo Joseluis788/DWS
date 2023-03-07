@@ -60,14 +60,17 @@ if (!isset($_SESSION)) {
                                 <i class="fa-solid fa-user"></i>
                             </div>
                             <input class="form-control" type="text" name="usuario" placeholder="Usuario">
+                            
                         </div>
-                        <br><br>
+                        <br><br><br>
                         <div class="input-group">
                             <div class="input-group-text">
                                 <i class="fa-solid fa-lock"></i>
                             </div>
-                            <input class="form-control" type="password" name="pass" placeholder="Contraseña" id="password">
+                            <input class="form-control" type="password" name="pass" placeholder="Contraseña" id="password" onkeyup="validarPassword()">
                         </div>
+                        <br>
+                        <span class="text-danger" id="mensaje"></span>
                         <br><br>
                         <div class="input-group">
                             <div class="input-group-text">
@@ -95,14 +98,31 @@ if (!isset($_SESSION)) {
             </div>
 
             <script>
-                // Nodos
-                function validar() 
+                function validarPassword() 
                 {
                     let formulario = document.getElementById("crearCuenta");
                     let password = document.getElementById("password").value;
-                    let email = document.getElementById("email").value;
+                    let mensaje = document.getElementById("mensaje");
 
-                    let expPass = /^(?=.[A-Z])(?=.\d).{8,32}$/;
+                    let expPass = /^(?=.[A-Z])(?=.\d).{8,24}$/;
+                    
+
+                    if (expPass.test(password))
+                    {
+                        mensaje = "NO";
+                        console.log("si");
+                    }
+                    else
+                    {
+                        mensaje.innerHTML = "La contraseña [8-24] debe tener una mayúsucla y un número";
+                        console.log("no");
+                    }
+
+                }
+                
+                function validarEmail()
+                {
+                    let email = document.getElementById("email").value;
                     let expEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,3}$/
                 }
             </script>

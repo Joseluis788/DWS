@@ -17,6 +17,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 
 include "Conexion.php";
 
-$consulta = $conexion->query("SELECT * FROM productos")
+$param = $_REQUEST['param'];
+$param = strtolower($param);
 
+$consulta = $conexion->query("SELECT Nombre FROM productos WHERE Nombre LIKE '%$param%'");
+$informacion = $consulta->fetch_object();
+
+echo $informacion->Nombre;
+
+while ($informacion != NULL)
+{
+    echo("<option value='$informacion->Nombre'></option>");
+    $informacion = $consulta->fetch_object();
+}
 ?>
