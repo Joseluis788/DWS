@@ -2,7 +2,7 @@
 if (isset($_REQUEST['enviar'])) 
 {
     $usuario = $_REQUEST['usuario'];
-    $pass = $_REQUEST['pass'];
+    $pass = md5($_REQUEST['pass']);
 
     include "Conexion.php";
     $consulta = $conexion->query("SELECT * FROM usuario WHERE Nombre='$usuario' and Contraseña='$pass'");
@@ -18,6 +18,7 @@ if (isset($_REQUEST['enviar']))
     
             if ($informacion->id_rol == 1) {
                 header("location:adminPaginaPrincipal.php");
+                die();
             } else {
                 header("location:PaginaPrincipal.php");
             }

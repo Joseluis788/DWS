@@ -16,7 +16,20 @@
 
 <body>
     <?php
-
+    if (isset($_COOKIE['color'])) {
+        if (strcmp($_COOKIE['color'], "oscuro")) {
+            $colorFondo = "fondo";
+            $colorImportante = "colorImportante";
+            $texto = "text-black";
+        } else {
+            $colorFondo = "fondoOscuro";
+            $colorImportante = "colorImportanteOscuro";
+            $texto = "text-white";
+        }
+    } else {
+        $colorFondo = "fondo";
+        $colorImportante = "colorImportante";
+    }
     if (!isset($_SESSION)) {
         session_start();
     }
@@ -29,11 +42,11 @@
                 <a class="text-white" href="logOut.php">Cerrar Sesión</a>
             </div>
         </div>
-        <div class="container-fluid fondo">
+        <div class="container-fluid <?php echo("$colorFondo")?>">
             <div class="container d-flex justify-content-center">
                 <div class="row">
                     <div class="col-lg-6 d-flex align-items-center">
-                        <h3 class="titulo">¡Reserva en tu restaurante favorita de manera sencilla!</h3>
+                        <h3 class="titulo <?php echo("$texto")?>">¡Reserva en tu restaurante favorita de manera sencilla!</h3>
                         <input type="search" placeholder="Buscar">
                     </div>
                     <div class="col-lg-6 d-flex justify-content-center">
@@ -42,9 +55,9 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid colorImportante">
+        <div class="container-fluid <?php echo("$colorImportante")?>">
             <div class="container d-flex justify-content-center pt-3">
-                <h2 class="titulo">Algunas de nuestras recomendaciones</h2>
+                <h2 class="titulo <?php echo("$texto")?>">Algunas de nuestras recomendaciones</h2>
             </div>
             <div class="container mt-5">
                 <div class="row">
@@ -84,7 +97,16 @@
         </div>
         <div class="container-fluid header">
             <footer class="d-flex justify-content-sm-between justify-content-center flex-wrap align-items-center py-3 border-top border-dark-subtle">
-                <p class="col-md-4 mb-0 text-muted justify-content-md-start justify-content-center">&copy; 2022 BookLoop, Inc</p>
+                <div class="col-md-4 mb-0 justify-content-md-start justify-content-center d-flex flex-column">
+                    <p class="text-muted">&copy; 2022 Jose Luis Torres Orcera</p>
+                    <form action="eleccionColor.php" method="POST" onchange="enviarColor()" name="formularioColor">
+                        <select name="color" class="rounded rounded-3 bg-warning-subtle">
+                            <option selected disabled>Color</option>
+                            <option value="original">Original</option>
+                            <option value="oscuro">Oscuro</option>
+                        </select>
+                    </form>
+                </div>
 
                 <a href="#" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                     <img class="bi me-2" width="100" height="100" src="imagenes/logo.png">
@@ -99,10 +121,15 @@
                 </ul>
             </footer>
         </div>
+        <script>
+            // Funcion para enviar el Color
+            function enviarColor() {
+                document.formularioColor.submit();
+            }
+        </script>
 
     <?php
-    } else 
-    {
+    } else {
         header("location:PaginaPrincipal.php");
     }
 

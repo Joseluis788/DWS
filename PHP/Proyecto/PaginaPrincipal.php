@@ -22,11 +22,13 @@
             {
                 $colorFondo = "fondo";
                 $colorImportante = "colorImportante";
+                $texto = "text-black";
             }
             else
             {
                 $colorFondo = "fondoOscuro";
                 $colorImportante = "colorImportanteOscuro";
+                $texto = "text-white";
             }
         }
         else
@@ -34,6 +36,7 @@
             $colorFondo = "fondo";
             $colorImportante = "colorImportante";
         }
+        
     ?>
     <div class="container-fluid shadow-sm d-flex justify-content-between align-items-center header">
         <img style="height: 100px;" src="imagenes/logo.png" alt="Logo BookLoop">
@@ -54,14 +57,16 @@
         <?php
         }
         ?>
-
     </div>
     <div class="container-fluid <?php echo("$colorFondo")?>">
         <div class="container d-flex justify-content-center">
             <div class="row">
                 <div class="col-lg-6 d-flex align-items-center">
-                    <h3 class="titulo">¡Reserva en tu restaurante favorita de manera sencilla!</h3>
-                    <input type="search" placeholder="Buscar">
+                    <h3 class="titulo  <?php echo("$texto")?>">¡Reserva en tu restaurante favorita de manera sencilla!</h3>
+                    <input type="search" placeholder="Buscar" id="buscador" list="datalista" onkeyup="recogerEscrito()">
+                    <datalist id="datalista">
+
+                    </datalist>
                 </div>
                 <div class="col-lg-6 d-flex justify-content-center">
                     <img class="w-75" src="imagenes/Imagen_Comida.png" alt="Platos de comida">
@@ -71,7 +76,7 @@
     </div>
     <div class="container-fluid <?php echo("$colorImportante")?>">
         <div class="container d-flex justify-content-center pt-3">
-            <h2 class="titulo">Algunas de nuestras recomendaciones</h2>
+            <h2 class="titulo <?php echo("$texto")?> ">Algunas de nuestras recomendaciones</h2>
         </div>
         <div class="container mt-5">
             <div class="row">
@@ -84,7 +89,7 @@
 
                 while ($informacion != NULL) {
                 ?>
-                    <div class="col-lg-4 d-flex justify-content-center divCartas">
+                    <div class="col-lg-4 d-flex justify-content-center divCartas text-black">
                         <div class="card" style="width: 18rem;">
                             <div class="img-wrapper">
                                 <img src="imagenes/<?php echo ("$informacion->Imagen"); ?>" alt="...">
@@ -112,7 +117,7 @@
     <div class="container-fluid header">
         <footer class="d-flex justify-content-sm-between justify-content-center flex-wrap align-items-center py-3 border-top border-dark-subtle">
             <div class="col-md-4 mb-0 justify-content-md-start justify-content-center d-flex flex-column">
-                <p class="text-muted">&copy; 2022 BookLoop, Inc</p>
+                <p class="text-muted">&copy; 2022 Jose Luis Torres Orcera</p>
                 <form action="eleccionColor.php" method="POST" onchange="enviarColor()" name="formularioColor">
                     <select name="color" class="rounded rounded-3 bg-warning-subtle">
                         <option selected disabled>Color</option>
@@ -143,6 +148,7 @@
             document.formularioColor.submit();
         }
     </script>
+    <script src="buscador.js"></script>
 </body>
 
 </html>

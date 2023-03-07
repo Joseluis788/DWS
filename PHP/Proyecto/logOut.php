@@ -7,7 +7,7 @@
     session_destroy();
     session_unset();
 
-    setcookie('PHPSSID','',time()-60);
+    setcookie('PHPSESSID','',time()-60);
 
     header("location:PaginaPrincipal.php");
 ?>

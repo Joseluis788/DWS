@@ -4,6 +4,7 @@
     {
         $usuario = trim($_REQUEST['usuario']);
         $pass = trim($_REQUEST['pass']);
+        $pass = md5($pass);
         $email = trim($_REQUEST['email']);
 
         if (strcmp($usuario, "") !== 0 && strcmp($email, "") !== 0 && strcmp($pass, "") !== 0)
