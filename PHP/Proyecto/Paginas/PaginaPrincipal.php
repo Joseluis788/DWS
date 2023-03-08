@@ -144,11 +144,10 @@
             </a>
 
             <ul class="nav col-md-4 justify-content-md-end justify-content-center">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><i class="fa-brands iconos fa-twitter"></i></a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><i class="fa-brands iconos fa-facebook"></i></a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><i class="fa-brands iconos fa-instagram"></i></a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><i class="fa-brands iconos fa-google-play"></i></a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><i class="fa-brands iconos fa-apple"></i></a></li>
+                <li class="nav-item"><a href="https://twitter.com/FokkoXD" class="nav-link px-2 text-muted" target="_blank"><i class="fa-brands iconos fa-twitter"></i></a></li>
+                <li class="nav-item"><a href="https://www.facebook.com/Google/?locale=es_ES" class="nav-link px-2 text-muted" target="_blank"><i class="fa-brands iconos fa-facebook"></i></a></li>
+                <li class="nav-item"><a href="https://instagram.com/fokko27?igshid=ZDdkNTZiNTM=" class="nav-link px-2 text-muted" target="_blank"><i class="fa-brands iconos fa-instagram"></i></a></li>
+                <li class="nav-item"><a href="mailto:jtoroc298@g.educaand.es" class="nav-link px-2 text-muted"><i class="fa-solid fa-envelope iconos"></i></a></li>
             </ul>
         </footer>
     </div>
