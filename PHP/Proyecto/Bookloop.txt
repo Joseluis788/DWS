@@ -1,2 +1,5 @@
 Bookloop
 bookloop123
+
+Usuario Admin = Administrador
+Contraseña Admin = J1234567
