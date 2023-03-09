@@ -20,7 +20,7 @@ function recogerEscrito()
             }
         };
         
-     xmlhttp.open("GET", "http://localhost/DWS/PHP/Proyecto/php/getBuscador.php?param=" + escrito, true);
+     xmlhttp.open("GET", "http://10.10.30.174/joseluis/getBuscador.php?param=" + escrito, true);
      xmlhttp.send();
     }
     

@@ -2,21 +2,24 @@
     // Compruebo que han pulsado el botón
     if (isset($_REQUEST['enviar']))
     {
-        // Meto los campos en una variable y la pass la cifro
+        // Meto los campos en una variable
         $usuario = trim($_REQUEST['usuario']);
         $pass = trim($_REQUEST['pass']);
-        $pass = md5($pass);
         $email = trim($_REQUEST['email']);
         $patternUsuario = "/^[a-zA-Z0-9]{6,24}$/";
         $patternPass = "/^(?=.*[A-Z])(?=.*\d).{8,24}$/";
         $patternEmail = "/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/";
-        // Comrpuebo que los campos no vienen vacios
+        // Compruebo que los campos no vienen vacios
         if (strcmp($usuario, "") !== 0 && strcmp($email, "") !== 0 && strcmp($pass, "") !== 0)
         {
+            // Compruebo el usuario
             if (preg_match($patternUsuario, $usuario))
             {
+                // Compruebo la contraseña
                 if (preg_match($patternPass, $pass))
                 {
+                    // Cifra la pass y compruebo el email
+                    $pass = md5($pass);
                     if(preg_match($patternEmail, $email))
                     {
                         // Hago la conexión

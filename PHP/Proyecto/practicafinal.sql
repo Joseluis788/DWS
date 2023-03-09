@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-03-2023 a las 13:27:29
+-- Tiempo de generación: 09-03-2023 a las 10:48:34
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -86,11 +86,9 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`ID`, `Nombre`, `Contraseña`, `Email`, `id_rol`) VALUES
-(1, 'Admin', '12345', 'fdsjkaksd', 1),
-(2, 'Joselu', 'joselu123', 'fdsfaa', 2),
-(3, 'fdas', 'fads', 'fads', 2),
-(4, 'fasd', 'fads', 'fads', 2),
-(5, '', '', '', 2);
+(12, 'JoseLuis', '2e1f56acaf75899c0793ad9ae02e3a00', 'faewffa', 2),
+(15, 'Administrador', '27d446454304fd70c6982222d9ee17dd', 'Admin@gmail.com', 1),
+(16, 'Gabriel', 'b040f624234328f8ae4d06568dc86be3', 'Gabriel@gmail.com', 2);
 
 --
 -- Índices para tablas volcadas
@@ -123,7 +121,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -135,7 +133,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Restricciones para tablas volcadas

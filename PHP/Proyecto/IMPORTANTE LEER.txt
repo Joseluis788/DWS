@@ -1,0 +1,7 @@
+CUANDO HAGAS EL IMPORT DE LA BASE DE DATOS NO CREA LA BASE DE DATOS. CREA UNA CON EL NOMBRE "proyectofinal" PARA QUE TODO VAYA CORRECTAMENTE
+
+Usuario base de datos: Bookloop
+Contraseña base de datos: bookloop123
+
+Usuario Admin = Administrador
+Contraseña Admin = J1234567

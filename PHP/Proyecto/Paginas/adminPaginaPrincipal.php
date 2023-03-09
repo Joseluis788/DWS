@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../styles.css">
     <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <link rel="stylesheet" href="../css/Transicion.css">
 </head>
 
 <body>
@@ -29,6 +28,7 @@
     } else {
         $colorFondo = "fondo";
         $colorImportante = "colorImportante";
+        $texto = "text-black";
     }
     // If que comprueba si existe una sesión iniciada y si no la inicia
     if (!isset($_SESSION)) {
@@ -51,7 +51,10 @@
                 <div class="row">
                     <div class="col-lg-6 d-flex align-items-center">
                         <h3 class="titulo <?php echo("$texto")?>">¡Reserva en tu restaurante favorita de manera sencilla!</h3>
-                        <input type="search" placeholder="Buscar">
+                        <input type="search" placeholder="Buscar" id="buscador" list="datalista" onkeyup="recogerEscrito()">
+                    <datalist id="datalista">
+
+                    </datalist>
                     </div>
                     <!-- Imagen de comida -->
                     <div class="col-lg-6 d-flex justify-content-center">
@@ -93,7 +96,7 @@
                         </div>
                     <?php
                         if ($contador % 3 == 0) {
-                            echo ('<hr class=" opacity-50">');
+                            echo ("<hr class='opacity-50 $texto'>");
                         }
                         $informacion = $productos->fetch_object();
                         $contador += 1;
@@ -134,6 +137,7 @@
                 document.formularioColor.submit();
             }
         </script>
+        <script src="../js/buscador.js">// Script para el Ajax</script>
 
     <?php
     } else {
