@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../styles.css">
     <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <link rel="stylesheet" href="../css/Transicion.css">
 </head>
 
 <body>
@@ -35,6 +34,7 @@
         {
             $colorFondo = "fondo";
             $colorImportante = "colorImportante";
+            $texto = "text-black";
         }
         
     ?>
@@ -109,13 +109,13 @@
                                 <p class="card-text"><?php echo ("$informacion->Descripcion"); ?></p>
                                 <i class="fa-solid fa-location-dot" style="font-size: 100%;"> <?php echo ("$informacion->Lugar"); ?></i>
                                 <p></p>
-                                <a href="#" class="btn btn-primary">Reservar</a>
+                                <a href="https://www.facebook.com/ilpostoalmerimar/?locale=es_LA" target="_blank" class="btn btn-primary">Reservar</a>
                             </div>
                         </div>
                     </div>
                 <?php
                     if ($contador % 3 == 0) {
-                        echo ('<hr class=" opacity-50">');
+                        echo ("<hr class='opacity-50 $texto'>");
                     }
                     $informacion = $productos->fetch_object();
                     $contador += 1;

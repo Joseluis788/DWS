@@ -27,6 +27,7 @@
     } else {
         $colorFondo = "fondo";
         $colorImportante = "colorImportante";
+        $texto = "text-black";
     }
     // If que comprueba si existe una sesión iniciada y si no la inicia
     if (!isset($_SESSION)) {
