@@ -108,7 +108,8 @@
 }
 
 .container1 .card .face.face2 .content a:hover{
-  background: #333 ;
+  background: rgb(155,81,224);
   color: whitesmoke; 
   box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
 }
+

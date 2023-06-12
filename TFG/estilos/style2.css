@@ -2,7 +2,7 @@ footer {
   display: block; 
 }
   
-footer {
+.footer-07 {
   padding: 5em 0 3em 0 ; 
 }
 
@@ -41,6 +41,96 @@ footer {
 }
   
 .footer-07 .ftco-footer-social li a 
+{
+  background: transparent;
+  border: 1px solid #a3de83; 
+}
+
+ 
+.footer-08 {
+  padding: 3em 0 0 0 ; 
+}
+
+
+.footer-08 a {
+  color: white; 
+}
+
+.footer-08 p {
+  color: rgba(255, 255, 255, 0.3); 
+}
+
+.footer-08 .footer-heading {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 30px; 
+}
+    
+.footer-08 .footer-heading .logo {
+  color: #fff; 
+}
+  
+.footer-08 .menu {
+  margin-bottom: 50px; 
+}
+    
+.footer-08 .menu a {
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px; 
+}
+  
+.footer-08 .ftco-footer-social li a 
+{
+  background: transparent;
+  border: 1px solid #a3de83; 
+}
+
+footer {
+  display: block; 
+}
+  
+.footer-09 {
+  padding: 5em 0 3em 0 ; 
+}
+
+.footer-09 {
+  background: #121212; 
+}
+
+.footer-09 a {
+  color: white; 
+}
+
+.footer-09 p {
+  color: rgba(255, 255, 255, 0.3); 
+}
+
+.footer-09 .footer-heading {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 30px; 
+}
+    
+.footer-09 .footer-heading .logo {
+  color: #fff; 
+}
+  
+.footer-09 .menu {
+  margin-bottom: 50px; 
+}
+    
+.footer-09 .menu a {
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px; 
+}
+  
+.footer-09 .ftco-footer-social li a 
 {
   background: transparent;
   border: 1px solid #a3de83; 
@@ -104,3 +194,143 @@ footer {
   30%{transform:rotate(-15deg);}
   40%{transform:rotate(-15deg);}
 }
+
+/* Inicio de sesión */
+
+#particles-js{
+  height: 100%
+}
+.loginBox{
+
+  width: 350px;
+  min-height: 200px;
+  background: #000000;
+  border-radius: 10px;
+  padding: 40px;
+  box-sizing: border-box
+}
+
+.user{
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 20px
+}
+
+h3{
+  margin: 0;
+  padding: 0 0 20px;
+  color: #59238F;
+  text-align: center
+}
+  
+.loginBox input{
+  width: 100%;
+  margin-bottom: 20px
+}
+.loginBox input[type="text"], .loginBox input[type="password"]{
+  border: none;
+  border-bottom: 2px solid #262626;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  background: transparent;
+  font-size: 16px;
+  padding-left: 20px;
+  box-sizing: border-box
+}
+
+.loginBox input[type="text"]:hover, .loginBox input[type="password"]:hover{
+  color: #42F3FA;
+  border: 1px solid #42F3FA;
+  box-shadow: 0 0 5px rgba(0,255,0,.3), 0 0 10px rgba(0,255,0,.2), 0 0 15px rgba(0,255,0,.1), 0 2px 0 black
+}
+
+.loginBox input[type="text"]:focus, .loginBox input[type="password"]:focus{
+  border-bottom: 2px solid #42F3FA
+}
+
+.inputBox{
+  position: relative
+}
+
+.inputBox span{
+  position: absolute;
+  top: 10px;
+  color: #262626
+}
+
+.loginBox input[type="submit"]{
+  border: none;
+  outline: none;
+  height: 40px;
+  font-size: 16px;
+  background: #59238F;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer
+}
+
+.loginBox a{
+  color: #262626;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  display: block
+}
+
+a:hover{
+  color: #00ffff
+}
+
+/*Contact sectiom*/
+.content-header{
+  font-family: 'Oleo Script', cursive;
+  color:#fcc500;
+  font-size: 45px;
+}
+
+.section-content{
+  text-align: center; 
+
+}
+#contact{
+    
+  padding-top: 60px;
+
+  height: 550px;
+  background: #3a6186; /* fallback for old browsers */
+  background: linear-gradient(135deg,rgb(33,33,33) 0%,rgb(155,81,224) 66%); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(135deg,rgb(33,33,33) 0%,rgb(155,81,224) 66%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color : #fff;    
+}
+.contact-section{
+  padding-top: 40px;
+}
+
+.form-line{
+  border-right: 1px solid #B29999;
+}
+
+
+label{
+  font-size: 1.3em;
+  line-height: 1em;
+  font-weight: normal;
+}
+.form-control{
+  font-size: 1.3em;
+  color: #080808;
+}
+textarea.form-control {
+    height: 135px;
+}
+
+.submit{
+  font-size: 1.1em;
+  float: right;
+  background-color: transparent;
+  color: #fff;
+
+}
+

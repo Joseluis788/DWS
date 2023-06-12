@@ -8,12 +8,20 @@
   background-size: cover;
 }
 
+.imagenFondoInicioSesion{
+  background-image: url(../imagenes/vvvortex.svg); 
+  background-repeat: no-repeat; 
+  background-attachment: local; 
+  background-color: rgb(33,33,33); 
+  background-size: cover;
+}
+
 .colorFondo{
   background:linear-gradient(90deg,rgb(33,33,33) ,rgb(155,81,224) ,rgb(33,33,33));
 }
 
 .desenfoque{
-  filter: blur(10px);
+  filter:blur(10px)
 }
 
 .glow-button {
@@ -76,6 +84,144 @@
     100% { background-position: 0 0; }
 }
 
+.glow-button2 {
+  width: 150px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: rgb(155,81,224);
+  background: white;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-button2:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-button2:active {
+  color: #000
+}
+
+.glow-button2:active:after {
+  background: transparent;
+}
+
+.glow-button2:hover:before {
+  opacity: 1;
+}
+
+.glow-button2:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(155,81,224);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.terminos{
+  color: white;
+}
+
+.rankingLetra
+{
+  color: rgb(155,81,224);
+}
+
+.ranking{
+  background-color: white;
+}
+
+.rankingPlayer{
+  background-color: rgb(207, 207, 207);
+}
+
+.colorFondoJuego{
+  background-color:rgb(155,81,224);
+}
+
+#countdown {
+  position: relative;
+  margin: auto;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+
+#countdown-number {
+  color: white;
+  display: inline-block;
+  line-height: 40px;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+svg circle {
+  stroke-dasharray: 113px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke: rgb(155,81,224);
+  fill: none;
+  animation: countdown 5s linear infinite forwards;
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+  to {
+    stroke-dashoffset: 113px;
+  }
+}
+
+.imagenFondoJuego{
+  background-image: url(../imagenes/hhhorizon\ \(1\).svg); 
+  background-repeat: no-repeat; 
+  background-attachment: local; 
+  background-color: rgb(33,33,33); 
+  background-size: cover;
+}
+
+.inputJuego{
+  padding: 10px 15px;
+  border: 3px solid rgb(155,81,224);
+  box-shadow: 0 3px 4px rgba(0,0,0,.25);
+  border-radius: 20px;
+  outline: 0;
+}
 
 /*!
  * Bootstrap  v5.3.0-alpha1 (https://getbootstrap.com/)
@@ -3885,6 +4031,13 @@ textarea.form-control-lg {
   color: var(--bs-nav-tabs-link-active-color);
   background-color: var(--bs-nav-tabs-link-active-bg);
   border-color: var(--bs-nav-tabs-link-active-border-color);
+}
+
+.nav-tabs2 .nav-link.active2,
+.nav-tabs2 .nav-item.show2 .nav-link2 {
+  color: white;
+  background-color: var(--bs-danger-text);
+  border-color: var(--bs-danger);
 }
 .nav-tabs .dropdown-menu {
   margin-top: calc(-1 * var(--bs-nav-tabs-border-width));
