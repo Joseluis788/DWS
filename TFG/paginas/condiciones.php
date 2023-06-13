@@ -15,7 +15,6 @@
     <script src="https://kit.fontawesome.com/95a02bd20d.js"></script>
     <link rel="stylesheet" href="../estilos/style2.css">
     <link rel="stylesheet" href="../estilos/ionicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <style>
         .hh{
             border: red 1px solid;

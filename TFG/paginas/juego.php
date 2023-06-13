@@ -196,7 +196,7 @@
                         <p id="artistasFinal" class="rankingLetra"></p>
                     </div>
                     <div>
-                        <button class="btn text-white" onclick="botonVolver()" style="background-color: rgb(155,81,224);">Volver</button>
+                        <button class="btn text-white" onclick="recogerPuntuacion()" style="background-color: rgb(155,81,224);">Volver</button>
                     </div>
             </swal-html>
         </template>
@@ -218,7 +218,6 @@
 
     function tiempo() {
       var tiempoRestante = 15; // Tiempo inicial en segundos
-      console.log(contador);
       botonMusica()
       document.getElementById("empezarMusica").disabled = true;
       // Función que se ejecuta cada segundo
@@ -247,6 +246,7 @@
             else
             {
                 setTimeout(finalPartida, 10000);
+
             }
         }
       }, 1000); // Intervalo de 1 segundo (1000 milisegundos)
@@ -365,6 +365,11 @@
         document.getElementById("sonido").src = array_js[contador].enlace;
     }
 
+    function recogerPuntuacion (){
+    
+        window.location.href = "../php/recogerPuntuacion.php?puntos=" + encodeURIComponent(puntos) + "&contadorArtistas=" + encodeURIComponent(contadorArtista) + "&contadorCanciones=" + encodeURIComponent(contadorCancion);  
+     
+    }
   </script>
 </body>
 </html>
