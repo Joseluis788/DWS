@@ -55,12 +55,12 @@
         <div class="container d-flex justify-content-center pt-5 pb-5">
             <div class="loginBox" style="width: 75%;"> 
                 <img class="user" src="../imagenes/ImagenInicioSesion.png" height="100px" width="100px">
-                <h3 class="pb-5"><?php echo($informacion->usuario);  ?></h3>
+                <h3 class="pb-5 text-white"><?php echo($informacion->usuario);  ?></h3>
                 <h3 class="pb-5">Estadísticas</h3>
                 <div class="inputBox pb-5" > 
                     <div class="row">
                         <div class="col-4">
-                            <h3>Puntos</h3>
+                            <h3 sty>Puntos</h3>
                         </div>
                         <div class="col-4">
                             <h3>Artistas</h3>

@@ -61,7 +61,7 @@ if (!isset($_SESSION)) {
             </a>
             <!-- Menú -->
             <ul class="nav nav-pills d-flex flex-wrap align-items-center">
-                <li class="nav-item"><a href="" class="nav-link active"><?php echo$_SESSION['usuario'];?></a></li>
+                <li class="nav-item"><a href="estadisticas.php" class="nav-link active"><?php echo$_SESSION['usuario'];?></a></li>
                 <li class="nav-item ms-4"><a href="../php/logOut.php" class="nav-link active bg-danger" aria-current="page">Cerrar Sesión</a></li>
             </ul>
             </header>

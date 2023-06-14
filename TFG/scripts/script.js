@@ -1,7 +1,3 @@
-
-
-
-
 function timer ()
 {
     var numero = document.getElementById('numero');
