@@ -5,20 +5,14 @@ Usuario: guessmaster
 Contraseña: supertfg
 
 SENTENCIA SQL QUE HAY QUE LANZAR ANTES DE INTRODUCIR LAS TABLAS
-
-
-
-CREATE DATABASE IF NOT EXISTS 'guessmaster' DEFAULT CHARACTER SET utf8 COLLATE
+<?php
+CREATE DATABASE IF NOT EXISTS `guessmaster` DEFAULT CHARACTER SET utf8 COLLATE
 utf8_spanish_ci;
-USE 'guessmaster';
+USE `guessmaster`;
 
 CREATE USER 'guessmaster'@'localhost' IDENTIFIED BY 'supertfg';
 GRANT ALL PRIVILEGES ON guessmaster.* TO 'guessmaster'@'localhost';
-
-
-
-
-
+?>
 
 ANTES DE EMPEZAR A JUGAR, BAJAR EL VOLÚMEN DEL PC DRÁSTICAMENTE
-
+sUpertfg1f
