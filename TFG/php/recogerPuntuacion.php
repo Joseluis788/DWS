@@ -32,18 +32,18 @@
             }
             
 
-            header("location:../paginas/PaginaPrincipal.php");
+            header("location:../paginas/paginaPrincipal.php");
 
 
         }
         else
         {
-            header("location:../paginas/PaginaPrincipal.php");
+            header("location:../paginas/paginaPrincipal.php");
         }
     }
     else
     {
-        header("location:../paginas/PaginaPrincipal.php");
+        header("location:../paginas/paginaPrincipal.php");
     }
 
 

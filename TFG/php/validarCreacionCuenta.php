@@ -49,11 +49,11 @@
                                 $_SESSION['registrado'] = true;
                                 $_SESSION['usuario'] = $usuario;
         
-                                header("location:../paginas/paginaprincipalSesion.php");
+                                header("location:../paginas/paginaPrincipalSesion.php");
                             }
                             else
                             {
-                                header("location:../paginas/paginaprincipalSesion.php");
+                                header("location:../paginas/paginaPrincipalSesion.php");
                             }
                         }
                     }

@@ -343,7 +343,7 @@
         }        
     }
 
-/*    function botonVolver (){
+    function botonVolver (){
         <?php if(isset($_SESSION['usuario']))
         {
             echo ('window.location.href = "paginaPrincipalSesion.php"');
@@ -351,7 +351,7 @@
         else
             echo ('window.location.href = "paginaPrincipal.php"');
         ?>
-    } */
+    }
 
     function botonMusica (){
     

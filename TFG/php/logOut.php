@@ -9,5 +9,5 @@
 
     setcookie('PHPSESSID','',time()-60);
     // Le redirijo a la página princiapl
-    header("location:../Paginas/PaginaPrincipal.php");
+    header("location:../paginas/paginaPrincipal.php");
 ?>

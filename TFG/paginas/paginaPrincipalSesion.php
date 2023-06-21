@@ -27,7 +27,7 @@ if (!isset($_SESSION)) {
   session_start();
   // Si está iniciada y es un usuario se reenvia a la página principal, y si es un administrador a la página principal de administrador
   if (!isset($_SESSION['usuario'])) {
-      header("location:PaginaPrincipal.php");
+      header("location:paginaPrincipal.php");
   } else {
 ?>
 <body>
